@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>setInterval example</title>
+    </head>
+    <body>
+        <h1>What time is it?</h1>
+        <label id="time"></label>
+
+        <script>
+            let timeElement = document.querySelector('#time')
+
+            setInterval( function() { // setInterval needs 2 arguments: handler/callback function & timeout
+                let date = Date() // Date() in JavaScript is specific object initilized the current moment
+                timeElement.innerHTML = date
+            }, 1000) // set 1000 miliseconds (1 second) so second timer will go up
+            // callback functions allow the rest of the JavaScript to keep working, otherwise everything else gets paused
+            
+            // above callback that uses arrow notation instead
+            setInterval( () => { // must have the empty (), works even without parameters
+                let date = Date() 
+                timeElement.innerHTML = date
+            }, 1000)
+
+
+        </script>
+
+
+
+
+
+    </body>
+
+</html>
